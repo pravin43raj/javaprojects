@@ -15,8 +15,8 @@
 	</parent>
 
     <modules>
-        <module></module>
-        <module></module>
+        <module>spring-boot-hello-world-example</module>
+        <module>spring-boot-project</module>
     </modules>
   
   <build>
