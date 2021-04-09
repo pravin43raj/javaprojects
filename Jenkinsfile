@@ -5,11 +5,8 @@ pipeline {
       steps {
         withMaven(maven : 'maven3.6.3') {
           sh 'mvn clean install'
+          sh 'docker build . '
         }  
       }
-      steps {
-        sh 'docker build .'
-      }
-    }
   }
 }
