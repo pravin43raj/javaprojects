@@ -14,9 +14,7 @@ pipeline {
     }
     stage('Build docker image') {
       steps {
-        script {
             dockerImage = docker.build ./spring-boot-hello-world-example/ registry
-        }  
       }  
     }  
   }
