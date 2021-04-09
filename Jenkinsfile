@@ -11,6 +11,7 @@ pipeline {
     stage('Build docker image') {
       steps {
         sh 'docker build ./spring-boot-hello-world-example/'
+        sh 'docker build ./spring-boot-project/'
       }  
     }  
   }
