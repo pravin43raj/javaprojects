@@ -11,7 +11,7 @@ pipeline {
     stage('Build docker image') {
       steps {
         sh 'cd spring-boot-hello-world-example'
-        sh 'docker build .'
+        sh 'pwd'
       }  
     }  
   }
