@@ -1,15 +1,17 @@
-pipeline{
+pipeline {
   agent any
   stages {
-    stage('Build stage'){
+    stage('Build stage') {
       steps {
         withMaven(maven : 'maven3.6.3') {
           sh 'mvn clean install'
         }  
       }
     }
-    stage('Build docker image'){
-      
+    stage('Build docker image') {
+      steps {
+        
+      }  
     }
   }
 }
