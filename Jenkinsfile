@@ -8,5 +8,6 @@ pipeline {
           sh 'docker build . '
         }  
       }
+    }
   }
-}
+}  
