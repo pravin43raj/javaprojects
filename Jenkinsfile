@@ -10,8 +10,10 @@ pipeline {
     }
     stage('Build docker image') {
       steps {
-        sh 'docker build ./spring-boot-hello-world-example/'
-        sh 'docker build ./spring-boot-project/'
+        sh 'docker build -t spring-boot-hello-world-example ./spring-boot-hello-world-example/'
+        sh 'docker image tag spring-boot-hello-world-example spring-boot-hello-world-example:1.0.0'
+        sh 'docker build -t spring-boot-project ./spring-boot-project/'
+        sh 'docker image tag spring-boot-project spring-boot-project:1.0.0'
       }  
     }  
   }
